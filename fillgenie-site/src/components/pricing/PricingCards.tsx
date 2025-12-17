@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '../common/Card';
 import { Button } from '../common/Button';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import { CheckCircleIcon, StarIcon } from '@heroicons/react/24/solid';
 
 export const PricingCards: React.FC = () => {
   const tiers = [
@@ -18,6 +18,11 @@ export const PricingCards: React.FC = () => {
         'Chrome extension access',
         'Email support',
       ],
+      testimonial: {
+        quote: 'As a student applying to multiple opportunities, this tool has been helpful for managing repetitive forms.',
+        role: 'UT Austin Student',
+        rating: 5,
+      },
       cta: 'Get Started Free',
       ctaLink: '/coming-soon',
       highlighted: false,
@@ -36,6 +41,11 @@ export const PricingCards: React.FC = () => {
         'Early access to new features',
         'Usage analytics',
       ],
+      testimonial: {
+        quote: 'Our finance team has found FillGenie useful for handling expense reports more efficiently.',
+        role: 'Finance Analyst',
+        rating: 5,
+      },
       cta: 'Start Free Trial',
       ctaLink: '/coming-soon',
       highlighted: true,
@@ -56,6 +66,11 @@ export const PricingCards: React.FC = () => {
         'Custom training & onboarding',
         'API access (coming soon)',
       ],
+      testimonial: {
+        quote: 'FillGenie has helped streamline our employee onboarding process. We\'ve seen measurable time savings.',
+        role: 'HR Analyst',
+        rating: 5,
+      },
       cta: 'Contact Sales',
       ctaLink: '/custom-solutions',
       highlighted: false,
@@ -96,7 +111,7 @@ export const PricingCards: React.FC = () => {
               <p className="text-sm text-text-muted mt-2">{tier.description}</p>
             </div>
 
-            <ul className="space-y-3 mb-8 flex-grow">
+            <ul className="space-y-3 mb-6 flex-grow">
               {tier.features.map((feature, featureIndex) => (
                 <li key={featureIndex} className="flex items-start gap-3">
                   <CheckCircleIcon
@@ -118,6 +133,28 @@ export const PricingCards: React.FC = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Social Proof Testimonial */}
+            <div className="mb-6 pb-6 border-t border-b border-gray-200">
+              <div className="pt-6">
+                {/* Rating stars */}
+                <div className="flex gap-1 mb-3">
+                  {[...Array(tier.testimonial.rating)].map((_, i) => (
+                    <StarIcon key={i} className="w-4 h-4 text-sunlit-amber" />
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="text-sm text-text-muted italic mb-3">
+                  "{tier.testimonial.quote}"
+                </p>
+
+                {/* Author info */}
+                <p className="text-xs text-text-muted font-medium">
+                  {tier.testimonial.role}
+                </p>
+              </div>
+            </div>
 
             <Button
               variant={tier.highlighted ? 'primary' : 'secondary'}

@@ -17,6 +17,10 @@
     --error: #D98C4A;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-warm-sand text-text-main;
     font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;

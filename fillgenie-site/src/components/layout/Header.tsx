@@ -8,7 +8,6 @@ export const Header: React.FC = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'How it Works', href: '/#how-it-works' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'FAQ', href: '/faq' },
