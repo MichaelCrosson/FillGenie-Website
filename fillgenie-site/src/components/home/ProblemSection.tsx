@@ -35,7 +35,7 @@ export const ProblemSection: React.FC = () => {
                     <problem.icon className="w-10 h-10 text-sunlit-amber" />
                   </div>
                 </div>
-                <h3 className="text-lg text-text-main bg-sunlit-amber bg-opacity-10 px-4 py-2 rounded-lg inline-block">
+                <h3 className="text-lg text-text-main">
                   {problem.title}
                 </h3>
               </Card>
