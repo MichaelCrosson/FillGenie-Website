@@ -29,15 +29,15 @@ export const ProblemSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {problems.map((problem, index) => (
             <div key={index}>
-              <Card className="h-full">
-                <div className="flex items-center gap-4">
-                  <div className="bg-sunlit-amber bg-opacity-10 p-3 rounded-full flex-shrink-0">
-                    <problem.icon className="w-6 h-6 text-sunlit-amber" />
+              <Card className="h-full text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-sunlit-amber bg-opacity-10 p-4 rounded-full">
+                    <problem.icon className="w-10 h-10 text-sunlit-amber" />
                   </div>
-                  <h3 className="text-lg font-bold text-text-main">
-                    {problem.title}
-                  </h3>
                 </div>
+                <h3 className="text-lg text-text-main bg-sunlit-amber bg-opacity-10 px-4 py-2 rounded-lg inline-block">
+                  {problem.title}
+                </h3>
               </Card>
             </div>
           ))}
