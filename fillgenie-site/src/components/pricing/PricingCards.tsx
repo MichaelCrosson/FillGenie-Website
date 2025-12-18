@@ -11,7 +11,6 @@ export const PricingCards: React.FC = () => {
       period: '/month',
       description: 'Perfect for individuals getting started',
       features: [
-        'Unlimited forms filled',
         'Up to 30 documents',
         'Basic support',
         'Works on all websites',
@@ -35,6 +34,7 @@ export const PricingCards: React.FC = () => {
       description: 'For professionals who need more',
       features: [
         'Everything in Free, plus:',
+        'Unlimited forms filled',
         'Unlimited document storage',
         'Priority AI processing',
         'Priority support',

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
 import { Button } from '../common/Button';
+import { useAuth } from '../../contexts/AuthContext';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isAuthenticated, user, logout } = useAuth();
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -13,6 +15,11 @@ export const Header: React.FC = () => {
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ];
+
+  const handleLogout = () => {
+    logout();
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -45,8 +52,8 @@ export const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Desktop navigation */}
-        <div className="hidden lg:flex lg:gap-x-8">
+        {/* Desktop navigation and CTAs */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -56,16 +63,31 @@ export const Header: React.FC = () => {
               {item.name}
             </a>
           ))}
-        </div>
-
-        {/* Desktop CTAs */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="text" to="/login" size="sm">
-            Login
-          </Button>
-          <Button variant="primary" to="/coming-soon" size="sm">
-            Try for Free
-          </Button>
+          
+          {isAuthenticated ? (
+            <>
+              <Button variant="text" to="/dashboard" size="sm">
+                My Dashboard
+              </Button>
+              <button
+                onClick={handleLogout}
+                className="text-sm font-semibold text-text-muted hover:text-sunlit-amber transition-colors flex items-center gap-1"
+                title="Logout"
+              >
+                <ArrowRightOnRectangleIcon className="h-5 w-5" />
+                <span className="sr-only">Logout</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <Button variant="text" to="/login" size="sm">
+                Login
+              </Button>
+              <Button variant="primary" to="/coming-soon" size="sm">
+                Try for Free
+              </Button>
+            </>
+          )}
         </div>
       </nav>
 
@@ -84,12 +106,29 @@ export const Header: React.FC = () => {
               </a>
             ))}
             <div className="mt-4 space-y-2">
-              <Button variant="text" to="/login" size="sm" className="w-full">
-                Login
-              </Button>
-              <Button variant="primary" to="/coming-soon" size="sm" className="w-full">
-                Try for Free
-              </Button>
+              {isAuthenticated ? (
+                <>
+                  <Button variant="text" to="/dashboard" size="sm" className="w-full">
+                    My Dashboard
+                  </Button>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-sm font-semibold text-text-muted hover:text-sunlit-amber transition-colors py-2 px-4 rounded-lg hover:bg-warm-sand flex items-center justify-center gap-2"
+                  >
+                    <ArrowRightOnRectangleIcon className="h-5 w-5" />
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Button variant="text" to="/login" size="sm" className="w-full">
+                    Login
+                  </Button>
+                  <Button variant="primary" to="/coming-soon" size="sm" className="w-full">
+                    Try for Free
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </div>

@@ -130,42 +130,6 @@ export const Security: React.FC = () => {
         </div>
       </Section>
 
-      {/* Compliance Section */}
-      <Section background="white" className="py-12 sm:py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-text-main mb-6">
-            Compliance & Standards
-          </h2>
-          <p className="text-lg text-text-muted mb-8">
-            FillGenie is built to meet industry security standards and is working toward formal compliance certifications.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            <Card>
-              <h3 className="font-bold text-text-main mb-2">Data Privacy Laws</h3>
-              <p className="text-text-muted text-sm">
-                We comply with GDPR, CCPA, and other regional privacy regulations. You have the right to access, 
-                export, or delete your data at any time.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-bold text-text-main mb-2">Industry Standards</h3>
-              <p className="text-text-muted text-sm">
-                Our security practices align with SOC 2 Type II requirements and industry best practices for 
-                data protection and system security.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-bold text-text-main mb-2">Transparent Reporting</h3>
-              <p className="text-text-muted text-sm">
-                In the unlikely event of a security incident, we commit to transparent communication and will 
-                notify affected users within 72 hours.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </Section>
-
       {/* Questions Section */}
       <Section background="warm-sand" className="py-12 sm:py-16">
         <div className="max-w-2xl mx-auto text-center">
