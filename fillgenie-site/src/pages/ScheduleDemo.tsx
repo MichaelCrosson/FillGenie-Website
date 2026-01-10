@@ -35,7 +35,7 @@ export const ScheduleDemo: React.FC = () => {
     {
       icon: UserGroupIcon,
       title: 'Personalized Walkthrough',
-      description: 'See how FillGenie works with your team\'s specific forms and workflows',
+      description: 'See how FillFlow works with your team\'s specific forms and workflows',
     },
     {
       icon: CalendarIcon,
@@ -79,7 +79,7 @@ export const ScheduleDemo: React.FC = () => {
             Schedule a Personalized Demo
           </h1>
           <p className="text-xl text-text-muted mb-8">
-            See how FillGenie can save your team hours on form-based workflows. 
+            See how FillFlow can save your team hours on form-based workflows. 
             We'll show you exactly how it works with your use case.
           </p>
         </div>
@@ -259,8 +259,8 @@ export const ScheduleDemo: React.FC = () => {
           </h2>
           <p className="text-lg text-text-muted mb-6">
             You can also reach us directly at{' '}
-            <a href="mailto:fillgenie@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
-              fillgenie@gmail.com
+            <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
+              FillFlow@gmail.com
             </a>
           </p>
           <p className="text-text-muted">

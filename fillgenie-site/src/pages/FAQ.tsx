@@ -8,16 +8,16 @@ export const FAQ: React.FC = () => {
       category: 'Getting Started',
       questions: [
         {
-          question: 'How do I install FillGenie?',
-          answer: 'Simply visit the Chrome Web Store and search for "FillGenie" or use the download link on our homepage. Click "Add to Chrome" and the extension will be installed instantly. You can start using it immediately on any form.',
+          question: 'How do I install FillFlow?',
+          answer: 'Simply visit the Chrome Web Store and search for "FillFlow" or use the download link on our homepage. Click "Add to Chrome" and the extension will be installed instantly. You can start using it immediately on any form.',
         },
         {
-          question: 'Is FillGenie free to use?',
-          answer: 'Yes! FillGenie offers a free tier that includes up to 30 documents and all basic form-filling features. For unlimited documents and advanced features, check out our Premium plan at $9.99/month.',
+          question: 'Is FillFlow free to use?',
+          answer: 'Yes! FillFlow offers a free tier that includes up to 30 documents and all basic form-filling features. For unlimited documents and advanced features, check out our Premium plan at $9.99/month.',
         },
         {
-          question: 'What browsers does FillGenie support?',
-          answer: 'Currently, FillGenie is available as a Chrome extension. Support for Firefox, Edge, and Safari is coming soon.',
+          question: 'What browsers does FillFlow support?',
+          answer: 'Currently, FillFlow is available as a Chrome extension. Support for Firefox, Edge, and Safari is coming soon.',
         },
       ],
     },
@@ -25,20 +25,20 @@ export const FAQ: React.FC = () => {
       category: 'How It Works',
       questions: [
         {
-          question: 'How does FillGenie know what information to fill in?',
-          answer: 'FillGenie uses advanced AI to understand form fields and match them with your stored information. You create a profile with your details once, and our smart matching system figures out which information goes where on any form.',
+          question: 'How does FillFlow know what information to fill in?',
+          answer: 'FillFlow uses advanced AI to understand form fields and match them with your stored information. You create a profile with your details once, and our smart matching system figures out which information goes where on any form.',
         },
         {
-          question: 'Can FillGenie handle complex forms?',
-          answer: 'Yes! FillGenie works with all types of forms including job applications, government forms, medical intake forms, financial applications, and more. Our AI adapts to different form structures and field types.',
+          question: 'Can FillFlow handle complex forms?',
+          answer: 'Yes! FillFlow works with all types of forms including job applications, government forms, medical intake forms, financial applications, and more. Our AI adapts to different form structures and field types.',
         },
         {
           question: 'How fast does it work?',
-          answer: 'FillGenie fills most forms in under 10 seconds. Complex multi-page forms may take a bit longer, but you\'ll still save significant time compared to manual entry.',
+          answer: 'FillFlow fills most forms in under 10 seconds. Complex multi-page forms may take a bit longer, but you\'ll still save significant time compared to manual entry.',
         },
         {
           question: 'Do I need to review the filled information?',
-          answer: 'Yes, we always recommend reviewing before submitting. FillGenie is highly accurate, but you should verify that all information is correct and appropriate for each specific form.',
+          answer: 'Yes, we always recommend reviewing before submitting. FillFlow is highly accurate, but you should verify that all information is correct and appropriate for each specific form.',
         },
       ],
     },
@@ -54,12 +54,12 @@ export const FAQ: React.FC = () => {
           answer: 'Your profile information is stored securely in the cloud with enterprise-grade encryption. You can delete your data at any time from your account settings.',
         },
         {
-          question: 'Does FillGenie store my form submissions?',
+          question: 'Does FillFlow store my form submissions?',
           answer: 'No, we do not store the actual form submissions or the content you submit to third-party websites. We only store your profile information that you explicitly provide to us.',
         },
         {
-          question: 'Can I use FillGenie for sensitive information?',
-          answer: 'Yes, FillGenie uses bank-level encryption to protect your data. However, we recommend not storing highly sensitive information like full credit card numbers or passwords in your profile.',
+          question: 'Can I use FillFlow for sensitive information?',
+          answer: 'Yes, FillFlow uses bank-level encryption to protect your data. However, we recommend not storing highly sensitive information like full credit card numbers or passwords in your profile.',
         },
       ],
     },
@@ -76,7 +76,7 @@ export const FAQ: React.FC = () => {
         },
         {
           question: 'Do you offer team or enterprise plans?',
-          answer: 'Yes! We offer custom Enterprise plans for teams with features like team management, SSO, dedicated support, and API access. Contact us at fillgenie@gmail.com or schedule a demo to learn more.',
+          answer: 'Yes! We offer custom Enterprise plans for teams with features like team management, SSO, dedicated support, and API access. Contact us at FillFlow@gmail.com or schedule a demo to learn more.',
         },
         {
           question: 'Is there a trial for Premium?',
@@ -88,12 +88,12 @@ export const FAQ: React.FC = () => {
       category: 'Troubleshooting',
       questions: [
         {
-          question: 'FillGenie isn\'t working on a specific website. What should I do?',
-          answer: 'Some websites may have compatibility issues. First, try refreshing the page. If that doesn\'t work, please email us at fillgenie@gmail.com with the website URL, and we\'ll investigate and add support if possible.',
+          question: 'FillFlow isn\'t working on a specific website. What should I do?',
+          answer: 'Some websites may have compatibility issues. First, try refreshing the page. If that doesn\'t work, please email us at FillFlow@gmail.com with the website URL, and we\'ll investigate and add support if possible.',
         },
         {
           question: 'How do I update my profile information?',
-          answer: 'Click the FillGenie extension icon in your browser, then go to Settings > Profile. You can edit any of your stored information there.',
+          answer: 'Click the FillFlow extension icon in your browser, then go to Settings > Profile. You can edit any of your stored information there.',
         },
         {
           question: 'Can I have multiple profiles?',
@@ -101,7 +101,7 @@ export const FAQ: React.FC = () => {
         },
         {
           question: 'I found a bug. How do I report it?',
-          answer: 'We appreciate bug reports! Please email fillgenie@gmail.com with a description of the issue, the website where it occurred, and any screenshots if possible.',
+          answer: 'We appreciate bug reports! Please email FillFlow@gmail.com with a description of the issue, the website where it occurred, and any screenshots if possible.',
         },
       ],
     },
@@ -116,9 +116,9 @@ export const FAQ: React.FC = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-text-muted mb-8">
-            Everything you need to know about FillGenie. Can't find your answer? Email us at{' '}
-            <a href="mailto:fillgenie@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
-              fillgenie@gmail.com
+            Everything you need to know about FillFlow. Can't find your answer? Email us at{' '}
+            <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
+              FillFlow@gmail.com
             </a>
           </p>
         </div>

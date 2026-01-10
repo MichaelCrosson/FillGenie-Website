@@ -16,7 +16,7 @@ export const ComingSoon: React.FC = () => {
         </h1>
         
         <p className="text-xl text-text-muted mb-8 max-w-2xl mx-auto">
-          We're putting the finishing touches on the FillGenie Chrome extension. 
+          We're putting the finishing touches on the FillFlow Chrome extension. 
           Sign up to be notified when it launches!
         </p>
 

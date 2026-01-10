@@ -20,7 +20,7 @@ export const Differentiators: React.FC = () => {
     {
       icon: FolderIcon,
       title: 'Uses your existing data',
-      description: 'Upload documents you already have—FillGenie understands context and pulls the right information.',
+      description: 'Upload documents you already have—FillFlow understands context and pulls the right information.',
     },
     {
       icon: LightBulbIcon,
@@ -30,7 +30,7 @@ export const Differentiators: React.FC = () => {
     {
       icon: LockClosedIcon,
       title: 'You stay in control',
-      description: 'Review every field before submitting. FillGenie suggests, you approve.',
+      description: 'Review every field before submitting. FillFlow suggests, you approve.',
     },
     {
       icon: RocketLaunchIcon,

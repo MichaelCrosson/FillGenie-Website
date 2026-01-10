@@ -9,7 +9,7 @@ export const HowItWorks: React.FC = () => {
       number: '1',
       icon: ArrowUpTrayIcon,
       title: 'Upload your documents',
-      description: 'Add PDFs, receipts, resumes, or forms you\'ve filled before. FillGenie learns from your data.',
+      description: 'Add PDFs, receipts, resumes, or forms you\'ve filled before. FillFlow learns from your data.',
     },
     {
       number: '2',
@@ -20,7 +20,7 @@ export const HowItWorks: React.FC = () => {
     {
       number: '3',
       icon: SparklesIcon,
-      title: 'FillGenie fills it for you',
+      title: 'FillFlow fills it for you',
       description: 'Click the extension, describe what you need, and watch it populate. Review, edit if needed, and submit.',
     },
   ];

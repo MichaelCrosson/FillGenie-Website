@@ -16,7 +16,7 @@ export const Dashboard: React.FC = () => {
               Welcome back{user?.full_name ? `, ${user.full_name}` : ''}!
             </h1>
             <p className="text-lg text-text-muted">
-              Your FillGenie dashboard is coming soon
+              Your FillFlow dashboard is coming soon
             </p>
           </div>
 
@@ -105,7 +105,7 @@ export const Dashboard: React.FC = () => {
 
           {/* Next Steps */}
           <Card className="mt-8 bg-warm-sand">
-            <h2 className="text-2xl font-bold text-text-main mb-4">Get Started with FillGenie</h2>
+            <h2 className="text-2xl font-bold text-text-main mb-4">Get Started with FillFlow</h2>
             <div className="space-y-3 text-text-muted">
               <div className="flex items-start gap-3">
                 <span className="text-sunlit-amber font-bold text-xl">1.</span>
@@ -125,7 +125,7 @@ export const Dashboard: React.FC = () => {
                 <span className="text-sunlit-amber font-bold text-xl">3.</span>
                 <div>
                   <p className="font-semibold text-text-main">Start Filling Forms</p>
-                  <p className="text-sm">Navigate to any web form and click the FillGenie extension to auto-fill</p>
+                  <p className="text-sm">Navigate to any web form and click the FillFlow extension to auto-fill</p>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { StarIcon } from '@heroicons/react/24/solid';
 export const SocialProof: React.FC = () => {
   const testimonials = [
     {
-      quote: 'FillGenie has helped streamline our employee onboarding process. We\'ve seen measurable time savings.',
+      quote: 'FillFlow has helped streamline our employee onboarding process. We\'ve seen measurable time savings.',
       role: 'HR Analyst',
       rating: 5,
     },
@@ -16,7 +16,7 @@ export const SocialProof: React.FC = () => {
       rating: 5,
     },
     {
-      quote: 'Our finance team has found FillGenie useful for handling expense reports more efficiently.',
+      quote: 'Our finance team has found FillFlow useful for handling expense reports more efficiently.',
       role: 'Finance Analyst',
       rating: 5,
     },

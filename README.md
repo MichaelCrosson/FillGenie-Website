@@ -1,14 +1,14 @@
-# FillGenie Website
+# FillFlow Website
 
-Official marketing website for FillGenie - an AI-powered form filling assistant that saves you hours every week.
+Official marketing website for FillFlow - an AI-powered form filling assistant that saves you hours every week.
 
 ## 🚀 Live Site
 
-Visit us at: [fillgenie.com](https://fill-genie.com)
+Visit us at: [FillFlow.com](https://fill-genie.com)
 
 ## 📋 Overview
 
-FillGenie is an intelligent Chrome extension that automatically fills out forms using your existing data. Stop copy-pasting, start saving time.
+FillFlow is an intelligent Chrome extension that automatically fills out forms using your existing data. Stop copy-pasting, start saving time.
 
 ## 🛠️ Tech Stack
 
@@ -23,7 +23,7 @@ FillGenie is an intelligent Chrome extension that automatically fills out forms 
 
 ## 🔐 Authentication System
 
-FillGenie uses AWS-backed authentication that works seamlessly across the website, Chrome extension, and dashboard. When users register:
+FillFlow uses AWS-backed authentication that works seamlessly across the website, Chrome extension, and dashboard. When users register:
 
 - **S3 Bucket Prefix**: `users/{user_id}/` for document storage
 - **Pinecone Namespace**: `user_{user_id}` for vector embeddings
@@ -33,7 +33,7 @@ All resources are automatically provisioned on registration. See `AUTHENTICATION
 
 ### Quick Setup
 
-1. Create `.env` file in `fillgenie-site/`:
+1. Create `.env` file in `FillFlow-site/`:
 ```bash
 VITE_API_URL=http://localhost:8000
 ```
@@ -42,13 +42,13 @@ VITE_API_URL=http://localhost:8000
 
 3. Test login at `/login` - registration creates AWS resources automatically
 
-For production, set `VITE_API_URL=https://api.fillgenie.com` in Vercel environment variables.
+For production, set `VITE_API_URL=https://api.FillFlow.com` in Vercel environment variables.
 
 ## 🏗️ Project Structure
 
 ```
-FillGenie Website/
-├── fillgenie-site/          # Main React application
+FillFlow Website/
+├── FillFlow-site/          # Main React application
 │   ├── src/
 │   │   ├── components/      # Reusable UI components
 │   │   │   ├── auth/        # Authentication components
@@ -89,13 +89,13 @@ FillGenie Website/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/MichaelCrosson/FillGenie-Website.git
-cd "FillGenie Website"
+git clone https://github.com/MichaelCrosson/FillFlow-Website.git
+cd "FillFlow Website"
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd fillgenie-site
+cd FillFlow-site
 ```
 
 3. Install dependencies:
@@ -152,12 +152,12 @@ The production build will be in the `dist/` directory.
 
 ## 📞 Contact
 
-- **Email**: fillgenie@gmail.com
-- **Website**: [fillgenie.com](https://fillgenie.com)
+- **Email**: FillFlow@gmail.com
+- **Website**: [FillFlow.com](https://FillFlow.com)
 
 ## 📝 License
 
-© 2025 FillGenie. All rights reserved.
+© 2025 FillFlow. All rights reserved.
 
 ## 🔄 Recent Updates
 
@@ -171,5 +171,5 @@ The production build will be in the `dist/` directory.
 - Created case studies page with BottleVision example
 - Built custom solutions page for enterprise clients
 - Enhanced pricing page with social proof
-- Updated all contact information to fillgenie@gmail.com
+- Updated all contact information to FillFlow@gmail.com
 - Improved SEO with visible FAQ content

@@ -38,9 +38,9 @@ export const Footer: React.FC = () => {
               <img
                 className="h-8 w-auto"
                 src="/images/PhilGenie.png"
-                alt="FillGenie Logo"
+                alt="FillFlow Logo"
               />
-              <span className="text-xl font-bold text-text-main">FillGenie</span>
+              <span className="text-xl font-bold text-text-main">FillFlow</span>
             </div>
             <p className="text-sm text-text-muted">
               Automatically fill forms using your existing data. Stop copy-pasting. Start saving time.
@@ -114,10 +114,10 @@ export const Footer: React.FC = () => {
               ))}
               <li className="pt-2">
                 <a
-                  href="mailto:fillgenie@gmail.com"
+                  href="mailto:FillFlow@gmail.com"
                   className="text-sm text-text-muted hover:text-sunlit-amber transition-colors"
                 >
-                  fillgenie@gmail.com
+                  FillFlow@gmail.com
                 </a>
               </li>
             </ul>
@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="mt-12 border-t border-text-muted border-opacity-20 pt-8">
           <p className="text-xs text-center text-text-muted">
-            © 2025 FillGenie. All rights reserved.
+            © 2025 FillFlow. All rights reserved.
           </p>
         </div>
       </div>

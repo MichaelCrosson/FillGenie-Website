@@ -42,7 +42,7 @@ export const PricingCards: React.FC = () => {
         'Usage analytics',
       ],
       testimonial: {
-        quote: 'Our finance team has found FillGenie useful for handling expense reports more efficiently.',
+        quote: 'Our finance team has found FillFlow useful for handling expense reports more efficiently.',
         role: 'Finance Analyst',
         rating: 5,
       },
@@ -67,7 +67,7 @@ export const PricingCards: React.FC = () => {
         'API access (coming soon)',
       ],
       testimonial: {
-        quote: 'FillGenie has helped streamline our employee onboarding process. We\'ve seen measurable time savings.',
+        quote: 'FillFlow has helped streamline our employee onboarding process. We\'ve seen measurable time savings.',
         role: 'HR Analyst',
         rating: 5,
       },

@@ -386,8 +386,8 @@ export const CustomSolutions: React.FC = () => {
           </h3>
           <p className="text-lg text-text-muted mb-6">
             Email us at{' '}
-            <a href="mailto:fillgenie@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
-              fillgenie@gmail.com
+            <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
+              FillFlow@gmail.com
             </a>
             {' '}to schedule a discovery call.
           </p>

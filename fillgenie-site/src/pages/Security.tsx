@@ -46,7 +46,7 @@ export const Security: React.FC = () => {
             Security & Data Protection
           </h1>
           <p className="text-xl text-text-muted mb-8">
-            Your trust is our priority. We've built FillGenie with enterprise-grade security 
+            Your trust is our priority. We've built FillFlow with enterprise-grade security 
             to protect your sensitive documents and personal information.
           </p>
         </div>
@@ -140,7 +140,7 @@ export const Security: React.FC = () => {
             We're happy to answer any questions about how we protect your data.
           </p>
           <a
-            href="mailto:fillgenie@gmail.com"
+            href="mailto:FillFlow@gmail.com"
             className="inline-block px-6 py-3 bg-sunlit-amber text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors"
           >
             Contact Security Team

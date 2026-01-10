@@ -187,10 +187,10 @@ export const Contact: React.FC = () => {
                   Email Us Directly
                 </h3>
                 <a 
-                  href="mailto:fillgenie@gmail.com"
+                  href="mailto:FillFlow@gmail.com"
                   className="text-sunlit-amber hover:underline font-semibold"
                 >
-                  fillgenie@gmail.com
+                  FillFlow@gmail.com
                 </a>
               </div>
             </Card>

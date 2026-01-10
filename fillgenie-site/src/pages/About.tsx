@@ -32,7 +32,7 @@ export const About: React.FC = () => {
       <Section background="warm-sand" className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-text-main mb-6">
-            About FillGenie
+            About FillFlow
           </h1>
           <p className="text-xl text-text-muted mb-8">
             We're on a mission to eliminate tedious form filling and give you back hours every week.
@@ -49,7 +49,7 @@ export const About: React.FC = () => {
           <Card className="mb-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-text-muted leading-relaxed mb-4">
-                FillGenie was born from frustration. After spending countless hours filling out repetitive 
+                FillFlow was born from frustration. After spending countless hours filling out repetitive 
                 forms—job applications, government paperwork, medical intake forms—we realized there had to 
                 be a better way.
               </p>
@@ -58,7 +58,7 @@ export const About: React.FC = () => {
                 require complex setup, or only work on specific websites. We knew AI could do better.
               </p>
               <p className="text-text-muted leading-relaxed">
-                So we built FillGenie: an intelligent form-filling assistant that actually understands forms, 
+                So we built FillFlow: an intelligent form-filling assistant that actually understands forms, 
                 learns from context, and works everywhere. What used to take 10 minutes now takes seconds. 
                 What used to be error-prone is now accurate. What used to be frustrating is now effortless.
               </p>
@@ -70,7 +70,7 @@ export const About: React.FC = () => {
               Beyond the Extension
             </h3>
             <p className="text-text-muted leading-relaxed">
-              While FillGenie started as a Chrome extension for individuals, we've expanded to solve unique 
+              While FillFlow started as a Chrome extension for individuals, we've expanded to solve unique 
               automation challenges for enterprises. From building BottleVision for Kaiser Permanente—using 
               OCR and AI to extract prescription information from pill bottles—to creating custom pipelines 
               for HR, finance, and healthcare workflows, we're pushing the boundaries of what's possible with 
@@ -123,7 +123,7 @@ export const About: React.FC = () => {
               Contact Us
             </a>
             <a
-              href="mailto:fillgenie@gmail.com"
+              href="mailto:FillFlow@gmail.com"
               className="inline-block px-6 py-3 border-2 border-sunlit-amber text-sunlit-amber font-semibold rounded-lg hover:bg-sunlit-amber hover:text-white transition-all"
             >
               Email Us

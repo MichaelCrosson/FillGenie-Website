@@ -6,7 +6,7 @@ export const ProductDemo: React.FC = () => {
     <Section background="teal-softwave" id="product-demo" className="py-6 sm:py-8">
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-text-main mb-4">
-          See FillGenie in action
+          See FillFlow in action
         </h2>
 
         {/* Video/Demo Container */}
@@ -18,7 +18,7 @@ export const ProductDemo: React.FC = () => {
                 <p className="text-xl font-semibold mb-2">30-60 Second Product Demo</p>
                 <p className="text-sm opacity-90 max-w-md mx-auto">
                   1. User opens expense report form<br/>
-                  2. Clicks FillGenie extension<br/>
+                  2. Clicks FillFlow extension<br/>
                   3. Enters: "Fill my Python training expense from May 17th"<br/>
                   4. Watch fields populate automatically with confidence colors<br/>
                   5. User reviews and submits

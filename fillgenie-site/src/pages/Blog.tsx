@@ -13,7 +13,7 @@ export const Blog: React.FC = () => {
       <Section background="warm-sand" className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-text-main mb-6">
-            FillGenie Blog
+            FillFlow Blog
           </h1>
           <p className="text-xl text-text-muted mb-8">
             Insights on automation, productivity, and the future of form filling.
@@ -34,7 +34,7 @@ export const Blog: React.FC = () => {
               </h2>
               <p className="text-text-muted mb-6 max-w-xl">
                 We're working on helpful content about form automation, productivity tips, 
-                and how to make the most of FillGenie. Check back soon for our first posts!
+                and how to make the most of FillFlow. Check back soon for our first posts!
               </p>
               <div className="flex items-center gap-2 text-text-muted">
                 <ClockIcon className="w-5 h-5" />
@@ -53,8 +53,8 @@ export const Blog: React.FC = () => {
           </h2>
           <p className="text-lg text-text-muted mb-6">
             Want to know when we publish new articles? Drop us a line at{' '}
-            <a href="mailto:fillgenie@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
-              fillgenie@gmail.com
+            <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
+              FillFlow@gmail.com
             </a>
           </p>
         </div>

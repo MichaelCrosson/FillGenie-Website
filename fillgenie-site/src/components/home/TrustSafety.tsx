@@ -24,7 +24,7 @@ export const TrustSafety: React.FC = () => {
     {
       icon: UserCircleIcon,
       title: 'You choose what to share',
-      description: 'Control exactly which documents FillGenie can access. Delete your data anytime.',
+      description: 'Control exactly which documents FillFlow can access. Delete your data anytime.',
     },
     {
       icon: CheckBadgeIcon,

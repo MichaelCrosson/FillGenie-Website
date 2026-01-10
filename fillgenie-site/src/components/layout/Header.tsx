@@ -30,9 +30,9 @@ export const Header: React.FC = () => {
             <img
               className="h-10 w-auto"
               src="/images/PhilGenie.png"
-              alt="FillGenie Logo"
+              alt="FillFlow Logo"
             />
-            <span className="text-2xl font-bold text-text-main">FillGenie</span>
+            <span className="text-2xl font-bold text-text-main">FillFlow</span>
           </Link>
         </div>
 

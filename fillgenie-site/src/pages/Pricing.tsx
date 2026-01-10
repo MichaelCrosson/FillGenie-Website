@@ -18,7 +18,7 @@ export const Pricing: React.FC = () => {
     },
     {
       question: 'Do you offer refunds?',
-      answer: 'Yes, we offer a 14-day money-back guarantee on Premium plans. If you\'re not satisfied, contact us at fillgenie@gmail.com for a full refund.',
+      answer: 'Yes, we offer a 14-day money-back guarantee on Premium plans. If you\'re not satisfied, contact us at FillFlow@gmail.com for a full refund.',
     },
     {
       question: 'What payment methods do you accept?',
@@ -56,7 +56,7 @@ export const Pricing: React.FC = () => {
               <h3 className="text-lg font-bold text-text-main mb-3">
                 What do I need to start with the Free plan?
               </h3>
-              <p className="text-text-muted">Nothing! No credit card required. Just install the extension and start using FillGenie immediately.</p>
+              <p className="text-text-muted">Nothing! No credit card required. Just install the extension and start using FillFlow immediately.</p>
             </div>
             
             <div className="bg-warm-sand rounded-lg p-6">
@@ -70,7 +70,7 @@ export const Pricing: React.FC = () => {
               <h3 className="text-lg font-bold text-text-main mb-3">
                 Do you offer team or volume pricing?
               </h3>
-              <p className="text-text-muted">Yes! For teams of 10+, we offer volume discounts and custom onboarding. Contact us at fillgenie@gmail.com or schedule a demo to discuss your needs.</p>
+              <p className="text-text-muted">Yes! For teams of 10+, we offer volume discounts and custom onboarding. Contact us at FillFlow@gmail.com or schedule a demo to discuss your needs.</p>
             </div>
 
             {faqs.map((faq, index) => (
@@ -99,7 +99,7 @@ export const Pricing: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:fillgenie@gmail.com"
+              href="mailto:FillFlow@gmail.com"
               className="btn-primary"
             >
               Email Us

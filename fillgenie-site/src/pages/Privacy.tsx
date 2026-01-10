@@ -15,7 +15,7 @@ export const Privacy: React.FC = () => {
             Last Updated: December 14, 2024
           </p>
           <p className="text-lg text-text-muted">
-            FillGenie is committed to protecting your privacy. This policy explains how we collect, 
+            FillFlow is committed to protecting your privacy. This policy explains how we collect, 
             use, and safeguard your personal information.
           </p>
         </div>
@@ -54,7 +54,7 @@ export const Privacy: React.FC = () => {
               How We Use Your Information
             </h2>
             <ul className="space-y-3 text-text-muted list-disc list-inside">
-              <li>To provide and maintain the FillGenie service</li>
+              <li>To provide and maintain the FillFlow service</li>
               <li>To fill forms with data from your uploaded documents when you request</li>
               <li>To communicate with you about your account, updates, and support</li>
               <li>To improve our service through aggregated, anonymized usage analytics</li>
@@ -114,7 +114,7 @@ export const Privacy: React.FC = () => {
                 <li><strong className="text-text-main">Object:</strong> Object to certain data processing activities</li>
               </ul>
               <p className="mt-4">
-                To exercise these rights, email us at <a href="mailto:fillgenie@gmail.com" className="text-sunlit-amber hover:underline">fillgenie@gmail.com</a>
+                To exercise these rights, email us at <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline">FillFlow@gmail.com</a>
               </p>
             </div>
           </Card>
@@ -151,8 +151,8 @@ export const Privacy: React.FC = () => {
               Children's Privacy
             </h2>
             <p className="text-text-muted">
-              FillGenie is not intended for users under 18 years old. We do not knowingly collect data from children. 
-              If you believe we've collected information from a child, please contact us immediately at fillgenie@gmail.com.
+              FillFlow is not intended for users under 18 years old. We do not knowingly collect data from children. 
+              If you believe we've collected information from a child, please contact us immediately at FillFlow@gmail.com.
             </p>
           </Card>
 
@@ -173,7 +173,7 @@ export const Privacy: React.FC = () => {
             </h2>
             <p className="text-text-muted">
               We may update this Privacy Policy from time to time. We'll notify you of material changes via email and by updating 
-              the "Last Updated" date at the top of this page. Continued use of FillGenie after changes constitutes acceptance 
+              the "Last Updated" date at the top of this page. Continued use of FillFlow after changes constitutes acceptance 
               of the updated policy. If you disagree with changes, you may delete your account.
             </p>
           </Card>
@@ -186,7 +186,7 @@ export const Privacy: React.FC = () => {
               If you have questions or concerns about this Privacy Policy or how we handle your data, please contact us:
             </p>
             <div className="text-text-muted">
-              <p><strong className="text-text-main">Email:</strong> <a href="mailto:fillgenie@gmail.com" className="text-sunlit-amber hover:underline">fillgenie@gmail.com</a></p>
+              <p><strong className="text-text-main">Email:</strong> <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline">FillFlow@gmail.com</a></p>
               <p className="mt-2"><strong className="text-text-main">Response Time:</strong> We aim to respond to privacy inquiries within 48 hours.</p>
             </div>
           </Card>

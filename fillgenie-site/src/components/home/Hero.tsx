@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-text-muted mb-6 max-w-2xl">
-              FillGenie uses your existing documents to complete forms in seconds so hours of busywork disappear every week.
+              FillFlow uses your existing documents to complete forms in seconds so hours of busywork disappear every week.
             </p>
 
             {/* CTAs */}

@@ -60,7 +60,7 @@ export const Login: React.FC = () => {
           </h1>
           <p className="text-text-muted">
             {isLogin 
-              ? 'Log in to access your FillGenie dashboard' 
+              ? 'Log in to access your FillFlow dashboard' 
               : 'Start automating your forms today'}
           </p>
         </div>
