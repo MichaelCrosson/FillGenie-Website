@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '../components/common/Section';
 import { Button } from '../components/common/Button';
+import { WaitlistForm } from '../components/waitlist/WaitlistForm';
 import { RocketLaunchIcon } from '@heroicons/react/24/outline';
 
 export const ComingSoon: React.FC = () => {
@@ -20,17 +21,8 @@ export const ComingSoon: React.FC = () => {
           Sign up to be notified when it launches!
         </p>
 
-        <div className="max-w-md mx-auto mb-8">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg border-2 border-sunlit-amber focus:outline-none focus:ring-2 focus:ring-sunlit-amber"
-            />
-            <Button variant="primary" size="md">
-              Notify Me
-            </Button>
-          </div>
+        <div className="mb-8">
+          <WaitlistForm />
         </div>
 
         <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-lg">
@@ -61,7 +53,7 @@ export const ComingSoon: React.FC = () => {
           <Button variant="text" to="/">
             ← Back to Home
           </Button>
-        </div>
+        </div>3
       </div>
     </Section>
   );
