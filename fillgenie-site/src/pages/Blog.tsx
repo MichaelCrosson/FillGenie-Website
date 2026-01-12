@@ -170,18 +170,3 @@ export const Blog: React.FC = () => {
     </div>
   );
 };
-
-          <h2 className="text-3xl font-bold text-text-main mb-4">
-            Get Notified
-          </h2>
-          <p className="text-lg text-text-muted mb-6">
-            Want to know when we publish new articles? Drop us a line at{' '}
-            <a href="mailto:FillFlow@gmail.com" className="text-sunlit-amber hover:underline font-semibold">
-              FillFlow@gmail.com
-            </a>
-          </p>
-        </div>
-      </Section>
-    </div>
-  );
-};
