@@ -19,11 +19,16 @@ export const Blog: React.FC = () => {
     const loadPosts = async () => {
       try {
         const response = await fetch('/blog-metadata.json');
+        if (!response.ok) {
+          throw new Error(`Failed to load blog metadata: ${response.status}`);
+        }
         const data: BlogMetadata = await response.json();
         setPosts(data.posts);
         setFilteredPosts(data.posts);
       } catch (error) {
         console.error('Error loading blog posts:', error);
+        setPosts([]);
+        setFilteredPosts([]);
       } finally {
         setLoading(false);
       }
@@ -120,7 +125,7 @@ export const Blog: React.FC = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPosts.map((post) => (
-                <Card key={post.id}>
+                <Card key={post.slug}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -132,17 +137,17 @@ export const Blog: React.FC = () => {
                       </span>
                       <div className="flex items-center gap-1 text-text-muted text-sm">
                         <ClockIcon className="w-4 h-4" />
-                        <span>{post.reading_time}</span>
+                        <span>{post.reading_time} min read</span>
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-text-main mb-2 line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-text-muted mb-4 line-clamp-3 flex-grow">
-                      {post.excerpt}
+                      {post.excerpt || 'Click to read more about this topic...'}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.slice(0, 3).map((tag) => (
+                      {(post.tags || post.keywords || []).slice(0, 3).map((tag) => (
                         <span key={tag} className="px-2 py-1 bg-warm-sand rounded text-xs text-text-muted">
                           {tag}
                         </span>
@@ -150,7 +155,9 @@ export const Blog: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-warm-sand">
                       <span className="text-sm text-text-muted">
-                        {new Date(post.date).toLocaleDateString()}
+                        {post.date ? new Date(post.date).toLocaleDateString() : 
+                         post.created_at ? new Date(post.created_at).toLocaleDateString() : 
+                         'Recent'}
                       </span>
                       <Link 
                         to={`/blog/${post.slug}`}

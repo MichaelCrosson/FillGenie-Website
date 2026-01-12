@@ -1,18 +1,21 @@
 export interface BlogPost {
-  id: string;
+  id?: string;
   title: string;
   slug: string;
   audience: 'executive' | 'technical';
-  content_type: 'news' | 'guide' | 'analysis';
-  date: string;
-  reading_time: string;
-  author: string;
-  excerpt: string;
-  tags: string[];
-  html_file: string;
+  content_type?: 'news' | 'guide' | 'analysis';
+  date?: string;
+  created_at?: string;
+  reading_time: string | number;
+  author?: string;
+  excerpt?: string;
+  tags?: string[];
+  keywords?: string[];
+  html_file?: string;
+  word_count?: number;
 }
 
 export interface BlogMetadata {
   posts: BlogPost[];
-  last_updated: string;
+  last_updated?: string;
 }
