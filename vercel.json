@@ -1,0 +1,27 @@
+{
+  "buildCommand": "cd fillgenie-site && npm install && npm run build",
+  "outputDirectory": "fillgenie-site/dist",
+  "installCommand": "echo 'Skipping root install'",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
