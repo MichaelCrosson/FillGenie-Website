@@ -65,9 +65,36 @@
   .prose section,
   .prose article,
   .prose header,
-  .prose main {
+  .prose main,
+  .prose span,
+  .prose button {
+    background: transparent !important;
     background-color: transparent !important;
     border-color: var(--warm-sand) !important;
+  }
+
+  /* Force remove blue/colored backgrounds on specific elements */
+  .prose [style*="background"],
+  .prose [class*="bg-"],
+  .prose [style*="blue"],
+  .prose [style*="color: #"],
+  .prose div[style],
+  .prose section[style],
+  .prose header[style] {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--text-main) !important;
+  }
+
+  /* Override badges, tags, and labels */
+  .prose span[class],
+  .prose .badge,
+  .prose .tag,
+  .prose .label {
+    background-color: var(--warm-sand) !important;
+    color: var(--text-main) !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 0.5rem !important;
   }
 
   .prose h1 {

@@ -34,8 +34,20 @@ export const BlogPost: React.FC = () => {
         if (!htmlResponse.ok) {
           throw new Error(`Failed to load HTML content: ${htmlResponse.status}`);
         }
-        const htmlText = await htmlResponse.text();
-        setHtmlContent(htmlText);
+        let htmlText = await htmlResponse.text();
+        
+        // Extract only the body content and strip unwanted styles
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+        const bodyContent = doc.querySelector('body') || doc.documentElement;
+        
+        // Remove style tags and inline styles that might override our theme
+        bodyContent.querySelectorAll('style').forEach(el => el.remove());
+        bodyContent.querySelectorAll('[style]').forEach(el => {
+          el.removeAttribute('style');
+        });
+        
+        setHtmlContent(bodyContent.innerHTML);
       } catch (err) {
         setError('Failed to load blog post');
         console.error('Error loading post:', err);
