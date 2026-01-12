@@ -28,8 +28,12 @@ export const BlogPost: React.FC = () => {
 
         setPost(foundPost);
 
-        // Load HTML content
-        const htmlResponse = await fetch(`/posts/${foundPost.html_file}`);
+        // Load HTML content - use html_file if provided, otherwise construct from slug
+        const htmlFile = foundPost.html_file || `${foundPost.slug}.html`;
+        const htmlResponse = await fetch(`/posts/${htmlFile}`);
+        if (!htmlResponse.ok) {
+          throw new Error(`Failed to load HTML content: ${htmlResponse.status}`);
+        }
         const htmlText = await htmlResponse.text();
         setHtmlContent(htmlText);
       } catch (err) {
