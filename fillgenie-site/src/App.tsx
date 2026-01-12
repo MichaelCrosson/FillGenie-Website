@@ -14,6 +14,7 @@ import { CustomSolutions } from './pages/CustomSolutions';
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
 import { Blog } from './pages/Blog';
+import { BlogPost } from './pages/BlogPost';
 import { FAQ } from './pages/FAQ';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
@@ -44,6 +45,7 @@ function App() {
             } 
           />
           <Route path="blog" element={<Blog />} />
+          <Route path="blog/:slug" element={<BlogPost />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
