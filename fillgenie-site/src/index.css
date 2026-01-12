@@ -60,15 +60,21 @@
   }
 
   .prose h1 {
-    @apply text-3xl font-bold mb-4 mt-8 text-text-main;
+    @apply text-3xl font-bold mb-4 mt-8 text-text-main !important;
   }
 
   .prose h2 {
-    @apply text-2xl font-bold mb-3 mt-6 text-text-main;
+    @apply text-2xl font-bold mb-3 mt-6 text-text-main !important;
   }
 
   .prose h3 {
-    @apply text-xl font-semibold mb-2 mt-4 text-text-main;
+    @apply text-xl font-semibold mb-2 mt-4 text-text-main !important;
+  }
+
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply font-semibold text-text-main !important;
   }
 
   .prose p {

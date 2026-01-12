@@ -59,7 +59,7 @@ export const Header: React.FC = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-text-main hover:text-sunlit-amber transition-colors"
+              className="text-sm font-semibold leading-6 text-text-main hover:text-sunlit-amber transition-colors whitespace-nowrap"
             >
               {item.name}
             </a>
