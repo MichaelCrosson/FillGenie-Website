@@ -59,50 +59,86 @@
     @apply text-text-main;
   }
 
+  /* Override any inline styles or background colors from HTML content */
+  .prose *,
+  .prose div,
+  .prose section,
+  .prose article,
+  .prose header,
+  .prose main {
+    background-color: transparent !important;
+    border-color: var(--warm-sand) !important;
+  }
+
   .prose h1 {
     @apply text-3xl font-bold mb-4 mt-8 text-text-main !important;
+    color: var(--text-main) !important;
+    background: transparent !important;
   }
 
   .prose h2 {
     @apply text-2xl font-bold mb-3 mt-6 text-text-main !important;
+    color: var(--text-main) !important;
+    background: transparent !important;
   }
 
   .prose h3 {
     @apply text-xl font-semibold mb-2 mt-4 text-text-main !important;
+    color: var(--text-main) !important;
+    background: transparent !important;
   }
 
   .prose h4,
   .prose h5,
   .prose h6 {
     @apply font-semibold text-text-main !important;
+    color: var(--text-main) !important;
+    background: transparent !important;
   }
 
   .prose p {
     @apply mb-4 leading-relaxed text-text-muted;
+    color: var(--text-muted) !important;
   }
 
   .prose ul, .prose ol {
     @apply mb-4 pl-6 text-text-muted;
+    color: var(--text-muted) !important;
   }
 
   .prose li {
     @apply mb-2;
+    color: var(--text-muted) !important;
   }
 
   .prose a {
     @apply text-sunlit-amber hover:text-lavender-mist transition-colors underline;
+    color: var(--sunlit-amber) !important;
   }
 
-  .prose strong {
+  .prose a:hover {
+    color: var(--lavender-mist) !important;
+  }
+
+  .prose strong,
+  .prose b {
     @apply font-semibold text-text-main;
+    color: var(--text-main) !important;
+  }
+
+  .prose em,
+  .prose i {
+    color: var(--text-muted) !important;
   }
 
   .prose code {
     @apply bg-warm-sand px-2 py-1 rounded text-sm text-text-main;
+    background-color: var(--warm-sand) !important;
   }
 
   .prose pre {
     @apply bg-warm-sand p-4 rounded-lg overflow-x-auto mb-4;
+    background-color: var(--warm-sand) !important;
   }
 
   .prose blockquote {

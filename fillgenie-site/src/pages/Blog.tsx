@@ -48,19 +48,19 @@ export const Blog: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <Section background="warm-sand" className="py-12 sm:py-16">
+      <Section background="warm-sand" className="py-8 sm:py-12">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-text-main mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-text-main mb-4">
             FillFlow Blog
           </h1>
-          <p className="text-xl text-text-muted mb-8">
+          <p className="text-xl text-text-muted mb-0">
             Insights on automation, AI innovations, productivity, and the latest tech trends.
           </p>
         </div>
       </Section>
 
       {/* Filter Section */}
-      <Section background="white" className="py-8">
+      <Section background="white" className="py-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
             <div className="flex items-center gap-2">
