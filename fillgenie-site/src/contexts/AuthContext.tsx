@@ -33,35 +33,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [token, setToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetch current user on mount (validates session)
-  useEffect(() => {
-    const initAuth = async () => {
-      const storedToken = localStorage.getItem('access_token');
-      
-      if (storedToken) {
-        setToken(storedToken);
-        try {
-          // Verify token is still valid by fetching user
-          await fetchCurrentUser();
-        } catch (error) {
-          console.error('Session validation failed:', error);
-          // Try to refresh token
-          const refreshed = await refreshToken();
-          if (!refreshed) {
-            // Refresh failed, clear auth
-            localStorage.removeItem('access_token');
-            localStorage.removeItem('refresh_token');
-            setToken(null);
-            setUser(null);
-          }
-        }
-      }
-      setIsLoading(false);
-    };
-
-    initAuth();
-  }, []);
-
   // Fetch current user info
   const fetchCurrentUser = async () => {
     const response = await fetch(`${API_URL}/api/v1/auth/me`, {
@@ -80,6 +51,78 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setUser(userData);
     return userData;
   };
+
+  const refreshTokenFn = async (): Promise<boolean> => {
+    try {
+      const storedRefreshToken = localStorage.getItem('refresh_token');
+      if (!storedRefreshToken) {
+        return false;
+      }
+
+      const response = await fetch(`${API_URL}/api/v1/auth/refresh`, {
+        method: 'POST',
+        credentials: 'include', // Include cookies
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ refresh_token: storedRefreshToken }),
+      });
+
+      if (!response.ok) {
+        return false;
+      }
+
+      const data = await response.json();
+      
+      // Store new tokens
+      localStorage.setItem('access_token', data.access_token);
+      localStorage.setItem('refresh_token', data.refresh_token);
+      
+      setToken(data.access_token);
+      
+      // Fetch updated user data
+      await fetchCurrentUser();
+      
+      return true;
+    } catch (error) {
+      console.error('Token refresh failed:', error);
+      return false;
+    }
+  };
+
+  // Fetch current user on mount (validates session)
+  useEffect(() => {
+    const initAuth = async () => {
+      try {
+        const storedToken = localStorage.getItem('access_token');
+        
+        if (storedToken) {
+          setToken(storedToken);
+          try {
+            // Verify token is still valid by fetching user
+            await fetchCurrentUser();
+          } catch (error) {
+            console.error('Session validation failed:', error);
+            // Try to refresh token
+            const refreshed = await refreshTokenFn();
+            if (!refreshed) {
+              // Refresh failed, clear auth
+              localStorage.removeItem('access_token');
+              localStorage.removeItem('refresh_token');
+              setToken(null);
+              setUser(null);
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Auth initialization error:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    initAuth();
+  }, []);
 
   const login = async (email: string, password: string) => {
     setIsLoading(true);
@@ -156,41 +199,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const refreshToken = async (): Promise<boolean> => {
-    try {
-      const storedRefreshToken = localStorage.getItem('refresh_token');
-      if (!storedRefreshToken) {
-        return false;
-      }
-
-      const response = await fetch(`${API_URL}/api/v1/auth/refresh`, {
-        method: 'POST',
-        credentials: 'include', // Include cookies
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ refresh_token: storedRefreshToken }),
-      });
-
-      if (!response.ok) {
-        return false;
-      }
-
-      const data = await response.json();
-      
-      // Store new tokens
-      localStorage.setItem('access_token', data.access_token);
-      localStorage.setItem('refresh_token', data.refresh_token);
-      
-      setToken(data.access_token);
-      
-      // Fetch updated user data
-      await fetchCurrentUser();
-      
-      return true;
-    } catch (error) {
-      console.error('Token refresh failed:', error);
-      return false;
-    }
+    return refreshTokenFn();
   };
 
   const logout = async () => {
