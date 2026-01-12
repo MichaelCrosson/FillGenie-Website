@@ -33,25 +33,25 @@ function App() {
             <Route path="privacy" element={<Privacy />} />
             <Route path="terms" element={<Terms />} />
             <Route path="schedule-demo" element={<ScheduleDemo />} />
-          <Route path="case-studies" element={<CaseStudies />} />
-          <Route path="custom-solutions" element={<CustomSolutions />} />
-          <Route path="login" element={<Login />} />
-          <Route 
-            path="dashboard" 
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            } 
-          />
-          <Route path="blog" element={<Blog />} />
-          <Route path="blog/:slug" element={<BlogPost />} />
-          <Route path="faq" element={<FAQ />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+            <Route path="case-studies" element={<CaseStudies />} />
+            <Route path="custom-solutions" element={<CustomSolutions />} />
+            <Route path="login" element={<Login />} />
+            <Route 
+              path="dashboard" 
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              } 
+            />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/:slug" element={<BlogPost />} />
+            <Route path="faq" element={<FAQ />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
     </Router>
     </AuthProvider>
   );
