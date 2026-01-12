@@ -184,7 +184,6 @@
   .copy-button {
     transition: opacity 0.2s ease-in-out !important;
   }
-  }
 
   .prose blockquote {
     @apply border-l-4 border-sunlit-amber pl-4 italic text-text-muted my-4;
