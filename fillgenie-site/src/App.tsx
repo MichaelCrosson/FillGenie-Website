@@ -13,7 +13,7 @@ import { CaseStudies } from './pages/CaseStudies';
 import { CustomSolutions } from './pages/CustomSolutions';
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
-import { Blog } from './pages/Blog';
+import { Blogs } from './pages/Blogs';
 import { BlogPost } from './pages/BlogPost';
 import { FAQ } from './pages/FAQ';
 import { About } from './pages/About';
@@ -44,7 +44,7 @@ function App() {
                 </ProtectedRoute>
               } 
             />
-            <Route path="blog" element={<Blog />} />
+            <Route path="blog" element={<Blogs />} />
             <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="faq" element={<FAQ />} />
             <Route path="about" element={<About />} />

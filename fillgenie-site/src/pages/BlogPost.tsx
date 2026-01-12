@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Section } from '../components/common/Section';
 import { Button } from '../components/common/Button';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ClipboardDocumentIcon, CheckIcon } from '@heroicons/react/24/outline';
 import type { BlogPost as BlogPostType } from '../types/blog';
 
 export const BlogPost: React.FC = () => {
@@ -11,6 +11,8 @@ export const BlogPost: React.FC = () => {
   const [htmlContent, setHtmlContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
+  const [copiedCode, setCopiedCode] = useState<string>('');
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const loadPost = async () => {
@@ -59,6 +61,40 @@ export const BlogPost: React.FC = () => {
     loadPost();
   }, [slug]);
 
+  // Add copy buttons to code blocks after content loads
+  useEffect(() => {
+    if (!contentRef.current || !htmlContent) return;
+
+    const codeBlocks = contentRef.current.querySelectorAll('pre');
+    codeBlocks.forEach((pre, index) => {
+      // Skip if button already exists
+      if (pre.querySelector('.copy-button')) return;
+
+      const button = document.createElement('button');
+      button.className = 'copy-button absolute top-2 right-2 p-2 rounded-lg bg-sunlit-amber text-white hover:bg-opacity-90 transition-all opacity-0 group-hover:opacity-100';
+      button.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>`;
+      
+      button.onclick = async () => {
+        const code = pre.textContent || '';
+        try {
+          await navigator.clipboard.writeText(code);
+          setCopiedCode(`code-${index}`);
+          button.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
+          setTimeout(() => {
+            setCopiedCode('');
+            button.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>`;
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      };
+
+      pre.style.position = 'relative';
+      pre.classList.add('group');
+      pre.appendChild(button);
+    });
+  }, [htmlContent]);
+
   if (loading) {
     return (
       <Section background="white" className="py-16">
@@ -85,7 +121,7 @@ export const BlogPost: React.FC = () => {
   return (
     <div>
       {/* Back Button */}
-      <Section background="warm-sand" className="py-6">
+      <Section background="warm-sand" className="py-3">
         <div className="max-w-4xl mx-auto">
           <Link to="/blog" className="inline-flex items-center gap-2 text-sunlit-amber hover:text-text-main transition-colors">
             <ArrowLeftIcon className="w-5 h-5" />

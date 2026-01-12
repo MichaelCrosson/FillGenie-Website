@@ -161,11 +161,29 @@
   .prose code {
     @apply bg-warm-sand px-2 py-1 rounded text-sm text-text-main;
     background-color: var(--warm-sand) !important;
+    font-family: 'Fira Code', monospace !important;
   }
 
   .prose pre {
     @apply bg-warm-sand p-4 rounded-lg overflow-x-auto mb-4;
     background-color: var(--warm-sand) !important;
+    position: relative !important;
+    padding: 2rem 1rem 1rem 1rem !important;
+  }
+
+  .prose pre code {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Copy button styles */
+  .prose pre.group:hover .copy-button {
+    opacity: 1 !important;
+  }
+
+  .copy-button {
+    transition: opacity 0.2s ease-in-out !important;
+  }
   }
 
   .prose blockquote {

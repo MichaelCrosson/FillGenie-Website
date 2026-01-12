@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 import type { BlogPost as BlogPostType, BlogMetadata } from '../types/blog';
 
-export const Blog: React.FC = () => {
+export const Blogs: React.FC = () => {
   const [posts, setPosts] = useState<BlogPostType[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<BlogPostType[]>([]);
   const [filter, setFilter] = useState<'all' | 'executive' | 'technical'>('all');
@@ -48,9 +48,9 @@ export const Blog: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <Section background="warm-sand" className="py-8 sm:py-12">
+      <Section background="warm-sand" className="py-6 sm:py-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-text-main mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-text-main mb-3">
             FillFlow Blog
           </h1>
           <p className="text-xl text-text-muted mb-0">
@@ -60,9 +60,9 @@ export const Blog: React.FC = () => {
       </Section>
 
       {/* Filter Section */}
-      <Section background="white" className="py-6">
+      <Section background="white" className="py-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
             <div className="flex items-center gap-2">
               <FunnelIcon className="w-5 h-5 text-text-muted" />
               <span className="text-text-muted font-medium">Filter by:</span>
