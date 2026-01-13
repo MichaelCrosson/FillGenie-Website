@@ -73,10 +73,16 @@
   .prose header,
   .prose main,
   .prose span,
-  .prose button {
+  .prose button,
+  .prose aside,
+  .prose nav,
+  .prose ul,
+  .prose ol,
+  .prose li,
+  .prose blockquote {
     background: transparent !important;
     background-color: transparent !important;
-    border-color: var(--warm-sand) !important;
+    border-color: transparent !important;
   }
 
   /* Force remove blue/colored backgrounds on specific elements */
@@ -209,12 +215,14 @@
   }
 
   .prose blockquote {
-    border-left: 4px solid var(--sunlit-amber) !important;
-    padding-left: 1rem !important;
+    border: none !important;
+    border-left: 0 !important;
+    padding: 0 !important;
     font-style: italic !important;
     color: var(--text-muted) !important;
-    margin: 1rem 0 !important;
+    margin: 0 !important;
     background: transparent !important;
+    display: none !important;
   }
 
   .prose img {
