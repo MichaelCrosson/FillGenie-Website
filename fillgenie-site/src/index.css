@@ -165,19 +165,21 @@
   }
 
   .prose code {
-    @apply bg-warm-sand px-2 py-1 rounded text-sm text-text-main;
-    background-color: var(--warm-sand) !important;
+    @apply px-2 py-1 rounded text-sm;
+    background-color: #f5e6d3 !important;
+    color: #8b4513 !important;
     font-family: 'Fira Code', 'Courier New', monospace !important;
     font-size: 0.875rem !important;
+    font-weight: 500 !important;
   }
 
   .prose pre {
-    @apply bg-warm-sand rounded-lg overflow-x-auto mb-4;
-    background-color: var(--warm-sand) !important;
+    @apply rounded-xl overflow-x-auto mb-6;
+    background: linear-gradient(135deg, #f8f0e3 0%, #f5e6d3 100%) !important;
     position: relative !important;
-    padding: 3rem 1.5rem 1.5rem 1.5rem !important;
-    border: 1px solid #e5d5b8 !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    padding: 3.5rem 2rem 2rem 2rem !important;
+    border: 2px solid var(--sunlit-amber) !important;
+    box-shadow: 0 4px 12px rgba(217, 140, 74, 0.15), 0 2px 4px rgba(0, 0, 0, 0.08) !important;
   }
 
   .prose pre code {
@@ -188,6 +190,8 @@
     display: block !important;
     white-space: pre !important;
     word-wrap: normal !important;
+    color: #2c3e50 !important;
+    font-weight: 500 !important;
     font-family: 'Fira Code', 'Courier New', monospace !important;
   }
 

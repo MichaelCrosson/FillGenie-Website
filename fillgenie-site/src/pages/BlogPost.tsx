@@ -70,16 +70,18 @@ export const BlogPost: React.FC = () => {
       if (pre.querySelector('.copy-button')) return;
 
       const button = document.createElement('button');
-      button.className = 'copy-button absolute top-2 right-2 p-2 rounded-lg bg-sunlit-amber text-white hover:bg-opacity-90 transition-all opacity-0 group-hover:opacity-100';
-      button.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>`;
+      button.className = 'copy-button absolute top-2 right-2 px-3 py-2 rounded-lg bg-sunlit-amber text-white hover:bg-opacity-80 transition-all shadow-md text-sm font-medium flex items-center gap-2';
+      button.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg><span>Copy</span>`;
       
       button.onclick = async () => {
         const code = pre.textContent || '';
         try {
           await navigator.clipboard.writeText(code);
-          button.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
+          button.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Copied!</span>`;
+          button.classList.add('bg-teal-softwave');
           setTimeout(() => {
-            button.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>`;
+            button.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg><span>Copy</span>`;
+            button.classList.remove('bg-teal-softwave');
           }, 2000);
         } catch (err) {
           console.error('Failed to copy:', err);
@@ -87,7 +89,6 @@ export const BlogPost: React.FC = () => {
       };
 
       pre.style.position = 'relative';
-      pre.classList.add('group');
       pre.appendChild(button);
     });
   }, [htmlContent]);
