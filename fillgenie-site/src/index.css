@@ -177,7 +177,7 @@
     @apply rounded-xl overflow-x-auto mb-6;
     background: linear-gradient(135deg, #f8f0e3 0%, #f5e6d3 100%) !important;
     position: relative !important;
-    padding: 3.5rem 2rem 2rem 2rem !important;
+    padding: 3rem 1.5rem 1.5rem 1.5rem !important;
     border: 2px solid var(--sunlit-amber) !important;
     box-shadow: 0 4px 12px rgba(217, 140, 74, 0.15), 0 2px 4px rgba(0, 0, 0, 0.08) !important;
   }
@@ -186,7 +186,7 @@
     background: transparent !important;
     padding: 0 !important;
     font-size: 0.875rem !important;
-    line-height: 1.7 !important;
+    line-height: 1.5 !important;
     display: block !important;
     white-space: pre !important;
     word-wrap: normal !important;
