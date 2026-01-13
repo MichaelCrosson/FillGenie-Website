@@ -59,6 +59,12 @@
     @apply text-text-main;
   }
 
+  /* Force consistent font family across all blog content */
+  .prose,
+  .prose * {
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  }
+
   /* Override any inline styles or background colors from HTML content */
   .prose *,
   .prose div,
@@ -182,6 +188,7 @@
     display: block !important;
     white-space: pre !important;
     word-wrap: normal !important;
+    font-family: 'Fira Code', 'Courier New', monospace !important;
   }
 
   /* Copy button styles */
