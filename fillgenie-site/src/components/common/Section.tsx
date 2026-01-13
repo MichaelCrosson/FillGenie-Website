@@ -24,7 +24,7 @@ export const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={clsx(backgroundClasses[background], 'py-16 sm:py-20 lg:py-24', className)}
+      className={clsx(backgroundClasses[background], className || 'py-16 sm:py-20 lg:py-24')}
     >
       <div className="section-container">{children}</div>
     </section>
